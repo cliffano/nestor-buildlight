@@ -1,0 +1,7 @@
+- params:
+    nestorbuildlight: ../../../../../bin/nestor-buildlight
+
+- description: Command help should display help information
+  command: '{nestorbuildlight} --help'
+  exitcode: 0
+  output: 'Usage: nestor-buildlight'

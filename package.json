@@ -1,0 +1,47 @@
+{
+  "name": "nestor-buildlight",
+  "description": "CLI for Jenkins build light notifier",
+  "keywords": [],
+  "version": "0.0.1",
+  "homepage": "http://github.com/cliffano/nestor-buildlight",
+  "author": "Cliffano Subagio cliffano@gmail.com (blog.cliffano.com)",
+  "contributors": [
+    "All contributors (https://github.com/cliffano/nestor-buildlight/graphs/contributors)"
+  ],
+  "main": "./lib/nestor-buildlight",
+  "bin": {
+    "nestor-buildlight": "./bin/nestor-buildlight"
+  },
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/cliffano/nestor-buildlight.git"
+  },
+  "bugs": {
+    "url": "http://github.com/cliffano/nestor-buildlight/issues"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "dependencies": {
+    "bagofcli": "~0.2.0",
+    "buildlight": "~0.10.0",
+    "nestor": "~0.2.4"
+  },
+  "devDependencies": {
+    "buster-node": "~0.7.0",
+    "referee": "~1.0.1"
+  },
+  "scripts": {},
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/cliffano/nestor-buildlight/raw/master/LICENSE"
+    }
+  ]
+}

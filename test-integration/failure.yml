@@ -1,0 +1,12 @@
+- params:
+    nestorbuildlight: ../../../../../bin/nestor-buildlight
+
+- description: Inexisting command should display error message
+  command: '{nestorbuildlight} someinexistingcommand'
+  exitcode: 1
+  output: 'Unknown command: someinexistingcommand, use --help for more info'
+
+- description: Inexisting Jenkins URL should display error message
+  command: 'JENKINS_URL=http://someinexistinghost {nestorbuildlight} run'
+  exitcode: 1
+  output: 'getaddrinfo ENOTFOUND'
