@@ -10,7 +10,7 @@
 Nestor Build Light
 ------------------
 
-Nestor Build Light is CLI for Jenkins build light notifier.
+Nestor Build Light is a CLI for Jenkins build light notifier.
 
 This is handy for monitoring Jenkins build status on a Delcom USB Visual Indicator device.
 
