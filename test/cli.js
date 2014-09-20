@@ -9,6 +9,7 @@ var assert           = referee.assert;
 
 buster.testCase('cli - exec', {
   'should contain commands with actions': function (done) {
+    console.log("TEST0");
     var mockCommand = function (base, actions) {
       assert.defined(base);
       assert.defined(actions.commands.run.action);
@@ -22,9 +23,11 @@ buster.testCase('cli - exec', {
 buster.testCase('cli - run', {
   setUp: function () {
     this.mockConsole = this.mock(console);
+    this.mockProcess = this.mock(process);
     this.stub(BuildLight.prototype, '_driver', function () {});
   },
   'should notify buildlight when there is no monitoring error': function (done) {
+    this.mockProcess.expects('exit').once().withExactArgs(0);
     this.stub(bag, 'command', function (base, actions) {
       actions.commands.run.action({ job: 'somejob', schedule: '* * * * * *', scheme: 'red,green,blue', usbled: '/some/usbled/path', blinkOnFailure: true });
     });
@@ -41,6 +44,7 @@ buster.testCase('cli - run', {
     cli.exec();
   },
   'should monitor using default settings': function (done) {
+    this.mockProcess.expects('exit').once().withExactArgs(0);
     this.stub(bag, 'command', function (base, actions) {
       actions.commands.run.action({});
     });
