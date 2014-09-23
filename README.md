@@ -24,11 +24,19 @@ Usage
 
 Monitor build status and notify build light device:
 
-    nestor buildlight
+    nestor-buildlight run
     
 Monitor build status on a build light with custom view and usbled path:
 
-    nestor buildlight --view <view> --usbled /sys/bus/usb/drivers/usbled/2-1.5:1.0
+    nestor-buildlight run --view <view> --usbled /sys/bus/usb/drivers/usbled/2-1.5:1.0
+
+For build light with non-RGB colour scheme, specify custom colour scheme:
+
+    nestor-buildlight run --scheme red,green,yellow
+
+If your team keeps ignoring failure notifications, you can blink the build light on failure (WARNING: this will annoy your team, and someone will either go berserk or fix the build a.s.a.p):
+
+    nestor-buildlight run --blink-on-failure
 
 Configuration
 -------------
