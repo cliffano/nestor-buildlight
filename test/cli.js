@@ -27,7 +27,6 @@ buster.testCase('cli - run', {
     this.stub(BuildLight.prototype, '_driver', function () {});
   },
   'should notify buildlight when there is no monitoring error': function (done) {
-    this.mockProcess.expects('exit').once().withExactArgs(0);
     this.stub(bag, 'command', function (base, actions) {
       actions.commands.run.action({ job: 'somejob', schedule: '* * * * * *', scheme: 'red,green,blue', usbled: '/some/usbled/path', blinkOnFailure: true });
     });
@@ -44,7 +43,6 @@ buster.testCase('cli - run', {
     cli.exec();
   },
   'should monitor using default settings': function (done) {
-    this.mockProcess.expects('exit').once().withExactArgs(0);
     this.stub(bag, 'command', function (base, actions) {
       actions.commands.run.action({});
     });
@@ -57,6 +55,20 @@ buster.testCase('cli - run', {
     this.stub(NestorBuildLight.prototype, 'notify', function (result) {
       assert.equals(result, 'OK');
       done();
+    });
+    cli.exec();
+  },
+  'should log error message and exit with non-zero code': function () {
+    this.mockConsole.expects('error').once().withExactArgs('some error');
+    this.mockProcess.expects('exit').once().withExactArgs(1);
+    this.stub(bag, 'command', function (base, actions) {
+      actions.commands.run.action({});
+    });
+    this.stub(Jenkins.prototype, 'monitor', function (opts, cb) {
+      assert.equals(opts.jobName, undefined);
+      assert.equals(opts.viewName, undefined);
+      assert.equals(opts.schedule, undefined);
+      cb(new Error('some error'));
     });
     cli.exec();
   }
