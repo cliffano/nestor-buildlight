@@ -34,6 +34,10 @@ For build light with non-RGB colour scheme, specify custom colour scheme:
 
     nestor-buildlight run --scheme red,green,yellow
 
+To customise status-colour map:
+
+    nestor-buildlight run --scheme red,blue,yellow --map FAIL=yellow,OK=blue,WARN=red
+
 If your team keeps ignoring failure notifications, you can blink the build light on failure (WARNING: this will annoy your team, and someone will either go berserk or fix the build a.s.a.p):
 
     nestor-buildlight run --blink-on-failure

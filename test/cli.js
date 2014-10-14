@@ -9,7 +9,6 @@ var assert           = referee.assert;
 
 buster.testCase('cli - exec', {
   'should contain commands with actions': function (done) {
-    console.log("TEST0");
     var mockCommand = function (base, actions) {
       assert.defined(base);
       assert.defined(actions.commands.run.action);
@@ -28,7 +27,7 @@ buster.testCase('cli - run', {
   },
   'should notify buildlight when there is no monitoring error': function (done) {
     this.stub(bag, 'command', function (base, actions) {
-      actions.commands.run.action({ job: 'somejob', schedule: '* * * * * *', scheme: 'red,green,blue', usbled: '/some/usbled/path', blinkOnFailure: true });
+      actions.commands.run.action({ job: 'somejob', schedule: '* * * * * *', scheme: 'red,green,blue', map: 'FAIL=red,OK=green,WARN=blue', usbled: '/some/usbled/path', blinkOnFailure: true });
     });
     this.stub(Jenkins.prototype, 'monitor', function (opts, cb) {
       assert.equals(opts.jobName, 'somejob');
