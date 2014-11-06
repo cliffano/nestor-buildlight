@@ -7,21 +7,24 @@ var assert           = referee.assert;
 
 buster.testCase('jenkins - jenkins', {
   setUp: function () {
+    this.mock({});
     this.stub(BuildLight.prototype, '_driver', function (opts) {
       return;
     });
   },
-  'should set opts to default when there is no customisation': function () {
+  'should set opts to default when there is no customisation': function (done) {
     var nestor = new NestorBuildLight({});
     assert.equals(nestor.opts.scheme, ['red', 'green', 'blue']);
     assert.equals(nestor.opts.map, { OK: 'green', FAIL: 'red', WARN: 'blue' });
     assert.defined(nestor.buildLight);
+    done();
   },
-  'should default WARN colour map to yellow when blue colour is not part of the scheme': function () {
+  'should default WARN colour map to yellow when blue colour is not part of the scheme': function (done) {
     var nestor = new NestorBuildLight({ scheme: ['red', 'green', 'yellow'] });
     assert.equals(nestor.opts.scheme, ['red', 'green', 'yellow']);
     assert.equals(nestor.opts.map, { OK: 'green', FAIL: 'red', WARN: 'yellow' });
     assert.defined(nestor.buildLight);
+    done();
   }
 });
 

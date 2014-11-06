@@ -14,6 +14,7 @@ buster.testCase('cli - exec', {
       assert.defined(actions.commands.run.action);
       done();
     };
+    this.mock({});
     this.stub(bag, 'command', mockCommand);
     cli.exec();
   }
