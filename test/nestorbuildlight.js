@@ -5,7 +5,7 @@ var NestorBuildLight = require('../lib/nestorbuildlight');
 var referee          = require('referee');
 var assert           = referee.assert;
 
-buster.testCase('jenkins - jenkins', {
+buster.testCase('nestorbuildlight - nestorbuildlight', {
   setUp: function () {
     this.mock({});
     this.stub(BuildLight.prototype, '_driver', function (opts) {
