@@ -12,7 +12,7 @@ Nestor Build Light
 
 Nestor Build Light is a CLI for Jenkins build light notifier.
 
-This is handy for monitoring Jenkins build status on a Delcom USB Visual Indicator device.
+This is handy for monitoring Jenkins build status on a [Delcom USB Visual Indicator](http://www.delcomproducts.com/products_USBLMP.asp) device.
 
 Installation
 ------------
@@ -25,8 +25,12 @@ Usage
 Monitor build status and notify build light device:
 
     nestor-buildlight run
-    
-Monitor build status on a build light with custom view and usbled path:
+
+Monitor build status of a job:
+
+    nestor-buildlight run --job <job>
+
+Monitor build status of a view with custom usbled path:
 
     nestor-buildlight run --view <view> --usbled /sys/bus/usb/drivers/usbled/2-1.5:1.0
 
