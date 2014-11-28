@@ -60,3 +60,8 @@ Set Jenkins URL in JENKINS_URL environment variable (defaults to http://localhos
     set JENKINS_URL=http://user:pass@host:port/path
 
 As an alternative to password, you can use Jenkins API token instead. Jenkins API token can be found on Jenkins user configuration page.
+
+Colophon
+--------
+
+[Developer's Guide](http://cliffano.github.io/developers_guide.html#nodejs)
