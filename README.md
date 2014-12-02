@@ -73,3 +73,8 @@ Build reports:
 * [Test coverage report](http://cliffano.github.io/nestor-buildlight/bob/coverage/buster-istanbul/lcov-report/lib/index.html)
 * [Integration tests report](http://cliffano.github.io/nestor-buildlight/bob/test-integration/cmdt.out)
 * [API Documentation](http://cliffano.github.io/nestor-buildlight/bob/doc/dox-foundation/index.html)
+
+Related Projects:
+
+* [nestor](http://github.com/cliffano/nestor) - Jenkins CLI and node.js client
+* [nestor-ninjablocks](http://github.com/cliffano/nestor-ninjablocks) - CLI for Jenkins Ninja Blocks notifier
