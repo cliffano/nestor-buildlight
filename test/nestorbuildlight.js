@@ -15,14 +15,14 @@ buster.testCase('nestorbuildlight - nestorbuildlight', {
   'should set opts to default when there is no customisation': function (done) {
     var nestor = new NestorBuildLight({});
     assert.equals(nestor.opts.scheme, ['red', 'green', 'blue']);
-    assert.equals(nestor.opts.map, { OK: 'green', FAIL: 'red', WARN: 'blue' });
+    assert.equals(nestor.opts.map, { ok: 'green', fail: 'red', warn: 'blue' });
     assert.defined(nestor.buildLight);
     done();
   },
-  'should default WARN colour map to yellow when blue colour is not part of the scheme': function (done) {
+  'should default warn colour map to yellow when blue colour is not part of the scheme': function (done) {
     var nestor = new NestorBuildLight({ scheme: ['red', 'green', 'yellow'] });
     assert.equals(nestor.opts.scheme, ['red', 'green', 'yellow']);
-    assert.equals(nestor.opts.map, { OK: 'green', FAIL: 'red', WARN: 'yellow' });
+    assert.equals(nestor.opts.map, { ok: 'green', fail: 'red', warn: 'yellow' });
     assert.defined(nestor.buildLight);
     done();
   }
@@ -42,7 +42,7 @@ buster.testCase('nestorbuildlight - notify', {
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/blue', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/green', 1);
     var nestor = new NestorBuildLight({ scheme: ['red', 'green', 'blue'], usbled: '/some/usbled/path/', platform: 'linux' });
-    nestor.notify('OK');
+    nestor.notify('ok');
   },
   'should switch all colours off then switch blue colour on on build light device when notification status is warn': function () {
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/red', 0);
@@ -50,7 +50,7 @@ buster.testCase('nestorbuildlight - notify', {
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/blue', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/blue', 1);
     var nestor = new NestorBuildLight({ scheme: ['red', 'green', 'blue'], usbled: '/some/usbled/path/', platform: 'linux' });
-    nestor.notify('WARN');
+    nestor.notify('warn');
   },
   'should switch all colours off then switch yellow colour on on build light device when notification status is warn': function () {
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/red', 0);
@@ -58,7 +58,7 @@ buster.testCase('nestorbuildlight - notify', {
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/yellow', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/yellow', 1);
     var nestor = new NestorBuildLight({ scheme: ['red', 'green', 'yellow'], usbled: '/some/usbled/path/', platform: 'linux' });
-    nestor.notify('WARN');
+    nestor.notify('warn');
   },
   'should switch all colours on on build light device when status is unknown': function () {
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/red', 1);
@@ -73,7 +73,7 @@ buster.testCase('nestorbuildlight - notify', {
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/blue', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/red', 1);
     var nestor = new NestorBuildLight({ scheme: ['red', 'green', 'blue'], usbled: '/some/usbled/path/', platform: 'linux' });
-    nestor.notify('FAIL');
+    nestor.notify('fail');
   },
   'should default to rgb scheme and switch all colours on on build light device when status is unknown': function () {
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/red', 1);
@@ -87,7 +87,7 @@ buster.testCase('nestorbuildlight - notify', {
       cb();
     });
     var nestor = new NestorBuildLight({ scheme: ['red', 'green', 'blue'], usbled: '/some/usbled/path/', platform: 'linux', blinkOnFailure: true });
-    nestor.notify('FAIL');
+    nestor.notify('fail');
   },
   'should log error message when an error occurs while blinking failure colour': function () {
     this.mockConsole.expects('error').once().withExactArgs('some error');
@@ -95,6 +95,6 @@ buster.testCase('nestorbuildlight - notify', {
       cb(new Error('some error'));
     });
     var nestor = new NestorBuildLight({ scheme: ['red', 'green', 'blue'], usbled: '/some/usbled/path/', platform: 'linux', blinkOnFailure: true });
-    nestor.notify('FAIL');
+    nestor.notify('fail');
   }
 });

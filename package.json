@@ -6,7 +6,7 @@
     "buildlight",
     "nestor"
   ],
-  "version": "0.0.3",
+  "version": "0.1.0",
   "homepage": "http://github.com/cliffano/nestor-buildlight",
   "author": "Cliffano Subagio cliffano@gmail.com (blog.cliffano.com)",
   "contributors": [
@@ -32,7 +32,7 @@
   "dependencies": {
     "bagofcli": "~0.2.1",
     "buildlight": "~0.10.0",
-    "nestor": "~0.2.4"
+    "nestor": "~0.3.0"
   },
   "devDependencies": {
     "buster-node": "~0.7.0",

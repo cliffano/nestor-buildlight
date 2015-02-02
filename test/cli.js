@@ -28,16 +28,16 @@ buster.testCase('cli - run', {
   },
   'should notify buildlight when there is no monitoring error': function (done) {
     this.stub(bag, 'command', function (base, actions) {
-      actions.commands.run.action({ job: 'somejob', schedule: '* * * * * *', scheme: 'red,green,blue', map: 'FAIL=red,OK=green,WARN=blue', usbled: '/some/usbled/path', blinkOnFailure: true });
+      actions.commands.run.action({ job: 'somejob', schedule: '* * * * * *', scheme: 'red,green,blue', map: 'fail=red,ok=green,warn=blue', usbled: '/some/usbled/path', blinkOnfailure: true });
     });
     this.stub(Jenkins.prototype, 'monitor', function (opts, cb) {
-      assert.equals(opts.jobName, 'somejob');
-      assert.equals(opts.viewName, undefined);
+      assert.equals(opts.job, 'somejob');
+      assert.equals(opts.view, undefined);
       assert.equals(opts.schedule, '* * * * * *');
-      cb(null, 'OK');
+      cb(null, 'ok');
     });
     this.stub(NestorBuildLight.prototype, 'notify', function (result) {
-      assert.equals(result, 'OK');
+      assert.equals(result, 'ok');
       done();
     });
     cli.exec();
@@ -47,13 +47,13 @@ buster.testCase('cli - run', {
       actions.commands.run.action({});
     });
     this.stub(Jenkins.prototype, 'monitor', function (opts, cb) {
-      assert.equals(opts.jobName, undefined);
-      assert.equals(opts.viewName, undefined);
+      assert.equals(opts.job, undefined);
+      assert.equals(opts.view, undefined);
       assert.equals(opts.schedule, undefined);
-      cb(null, 'OK');
+      cb(null, 'ok');
     });
     this.stub(NestorBuildLight.prototype, 'notify', function (result) {
-      assert.equals(result, 'OK');
+      assert.equals(result, 'ok');
       done();
     });
     cli.exec();
@@ -65,8 +65,8 @@ buster.testCase('cli - run', {
       actions.commands.run.action({});
     });
     this.stub(Jenkins.prototype, 'monitor', function (opts, cb) {
-      assert.equals(opts.jobName, undefined);
-      assert.equals(opts.viewName, undefined);
+      assert.equals(opts.job, undefined);
+      assert.equals(opts.view, undefined);
       assert.equals(opts.schedule, undefined);
       cb(new Error('some error'));
     });
