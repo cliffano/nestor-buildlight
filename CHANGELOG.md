@@ -1,5 +1,5 @@
 ### 0.1.1-pre
-*
+* Add colour-status logging
 
 ### 0.1.0
 * Upgrade nestor to 0.3.x

@@ -37,6 +37,7 @@ buster.testCase('nestorbuildlight - notify', {
     });
   },
   'should switch all colours off then switch one colour on on build light device based on notification status': function () {
+    this.mockConsole.expects('log').once().withExactArgs('Setting build light colour to %s for status %s', 'green', 'ok');
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/red', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/green', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/blue', 0);
@@ -45,6 +46,7 @@ buster.testCase('nestorbuildlight - notify', {
     nestor.notify('ok');
   },
   'should switch all colours off then switch blue colour on on build light device when notification status is warn': function () {
+    this.mockConsole.expects('log').once().withExactArgs('Setting build light colour to %s for status %s', 'blue', 'warn');
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/red', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/green', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/blue', 0);
@@ -53,6 +55,7 @@ buster.testCase('nestorbuildlight - notify', {
     nestor.notify('warn');
   },
   'should switch all colours off then switch yellow colour on on build light device when notification status is warn': function () {
+    this.mockConsole.expects('log').once().withExactArgs('Setting build light colour to %s for status %s', 'yellow', 'warn');
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/red', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/green', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/yellow', 0);
@@ -61,6 +64,7 @@ buster.testCase('nestorbuildlight - notify', {
     nestor.notify('warn');
   },
   'should switch all colours on on build light device when status is unknown': function () {
+    this.mockConsole.expects('log').once().withExactArgs('Setting build light colour to %s for status %s', 'on', 'SOMEUNKNOWNSTATUS');
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/red', 1);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/green', 1);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/blue', 1);
@@ -68,6 +72,7 @@ buster.testCase('nestorbuildlight - notify', {
     nestor.notify('SOMEUNKNOWNSTATUS');
   },
   'should switch all colours off then switch red colour on on build light device when status is fail': function () {
+    this.mockConsole.expects('log').once().withExactArgs('Setting build light colour to %s for status %s', 'red', 'fail');
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/red', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/green', 0);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/blue', 0);
@@ -76,6 +81,7 @@ buster.testCase('nestorbuildlight - notify', {
     nestor.notify('fail');
   },
   'should default to rgb scheme and switch all colours on on build light device when status is unknown': function () {
+    this.mockConsole.expects('log').once().withExactArgs('Setting build light colour to %s for status %s', 'on', 'SOMEUNKNOWNSTATUS');
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/red', 1);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/green', 1);
     this.mockFs.expects('writeFileSync').once().withExactArgs('/some/usbled/path/blue', 1);
@@ -83,6 +89,7 @@ buster.testCase('nestorbuildlight - notify', {
     nestor.notify('SOMEUNKNOWNSTATUS');
   },
   'should blink red colour when status is fail and blinkOnFailure is true': function () {
+    this.mockConsole.expects('log').once().withExactArgs('Setting build light colour to %s for status %s', 'red', 'fail');
     this.stub(BuildLight.prototype, 'blink', function (colour, cb) {
       cb();
     });
@@ -90,6 +97,7 @@ buster.testCase('nestorbuildlight - notify', {
     nestor.notify('fail');
   },
   'should log error message when an error occurs while blinking failure colour': function () {
+    this.mockConsole.expects('log').once().withExactArgs('Setting build light colour to %s for status %s', 'red', 'fail');
     this.mockConsole.expects('error').once().withExactArgs('some error');
     this.stub(BuildLight.prototype, 'blink', function (colour, cb) {
       cb(new Error('some error'));
