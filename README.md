@@ -1,7 +1,7 @@
 <img align="right" src="https://raw.github.com/cliffano/nestor-buildlight/master/avatar.jpg" alt="Avatar"/>
 
-[![Build Status](https://secure.travis-ci.org/cliffano/nestor-buildlight.png?branch=master)](http://travis-ci.org/cliffano/nestor-buildlight)
-[![Dependencies Status](https://david-dm.org/cliffano/nestor-buildlight.png)](http://david-dm.org/cliffano/nestor-buildlight)
+[![Build Status](https://img.shields.io/travis/cliffano/nestor-buildlight.svg)](http://travis-ci.org/cliffano/nestor-buildlight)
+[![Dependencies Status](https://img.shields.io/david/cliffano/nestor-buildlight.svg)](http://david-dm.org/cliffano/nestor-buildlight)
 [![Coverage Status](https://coveralls.io/repos/cliffano/nestor-buildlight/badge.png?branch=master)](https://coveralls.io/r/cliffano/nestor-buildlight?branch=master)
 [![Published Version](https://badge.fury.io/js/nestor-buildlight.png)](http://badge.fury.io/js/nestor-buildlight)
 <br/>
