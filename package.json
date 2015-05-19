@@ -4,7 +4,11 @@
   "keywords": [
     "jenkins",
     "buildlight",
-    "nestor"
+    "delcom",
+    "nestor",
+    "cli",
+    "notifier",
+    "ci"
   ],
   "version": "0.1.2",
   "homepage": "http://github.com/cliffano/nestor-buildlight",
