@@ -77,4 +77,5 @@ Build reports:
 Related Projects:
 
 * [nestor](http://github.com/cliffano/nestor) - Jenkins CLI and node.js client
+* [nestor-lifx](http://github.com/cliffano/nestor-lifx) - CLI for Jenkins LIFX notifier
 * [nestor-ninjablocks](http://github.com/cliffano/nestor-ninjablocks) - CLI for Jenkins Ninja Blocks notifier
