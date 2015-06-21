@@ -68,11 +68,11 @@ Colophon
 
 Build reports:
 
-* [Code complexity report](http://cliffano.github.io/nestor-buildlight/bob/complexity/plato/index.html)
-* [Unit tests report](http://cliffano.github.io/nestor-buildlight/bob/test/buster.out)
-* [Test coverage report](http://cliffano.github.io/nestor-buildlight/bob/coverage/buster-istanbul/lcov-report/lib/index.html)
-* [Integration tests report](http://cliffano.github.io/nestor-buildlight/bob/test-integration/cmdt.out)
-* [API Documentation](http://cliffano.github.io/nestor-buildlight/bob/doc/dox-foundation/index.html)
+* [Code complexity report](http://cliffano.github.io/nestor-buildlight/complexity/plato/index.html)
+* [Unit tests report](http://cliffano.github.io/nestor-buildlight/test/buster.out)
+* [Test coverage report](http://cliffano.github.io/nestor-buildlight/coverage/buster-istanbul/lcov-report/lib/index.html)
+* [Integration tests report](http://cliffano.github.io/nestor-buildlight/test-integration/cmdt.out)
+* [API Documentation](http://cliffano.github.io/nestor-buildlight/doc/dox-foundation/index.html)
 
 Related Projects:
 
