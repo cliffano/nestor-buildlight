@@ -36,7 +36,7 @@
   "dependencies": {
     "bagofcli": "^0.2.5",
     "buildlight": "^0.10.1",
-    "nestor": "^0.3.3"
+    "nestor": "^0.3.4"
   },
   "devDependencies": {
     "buster-node": "^0.7.1",
