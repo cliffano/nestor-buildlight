@@ -34,13 +34,13 @@
     "test": "./test"
   },
   "dependencies": {
-    "bagofcli": "^0.2.3",
+    "bagofcli": "^0.2.5",
     "buildlight": "^0.10.1",
     "nestor": "^0.3.3"
   },
   "devDependencies": {
     "buster-node": "^0.7.1",
-    "referee": "^1.1.1"
+    "referee": "^1.2.0"
   },
   "scripts": {},
   "engines": {
