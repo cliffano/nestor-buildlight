@@ -1,3 +1,10 @@
+## Unreleased
+
+### Changed
+- Replace lint type from jshint to eslint
+- Replace coverage from buster-istanbul to c8
+- Replace doc type from dox-foundation to jsdoc
+
 ### 0.1.3
 * Set min node engine to >= 4.0.0
 
