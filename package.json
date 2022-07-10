@@ -1,5 +1,6 @@
 {
   "name": "nestor-buildlight",
+  "type": "module",
   "description": "CLI for Jenkins build light notifier",
   "keywords": [
     "jenkins",
@@ -16,9 +17,9 @@
   "contributors": [
     "All contributors (https://github.com/cliffano/nestor-buildlight/graphs/contributors)"
   ],
-  "main": "./lib/nestor-buildlight",
+  "main": "./lib/nestor-buildlight.js",
   "bin": {
-    "nestor-buildlight": "./bin/nestor-buildlight"
+    "nestor-buildlight": "./bin/nestor-buildlight.js"
   },
   "preferGlobal": true,
   "repository": {
@@ -34,17 +35,17 @@
     "test": "./test"
   },
   "dependencies": {
-    "bagofcli": "^1.0.0",
-    "buildlight": "^0.10.1",
-    "nestor": "^1.0.2"
+    "bagofcli": "^2.3.0",
+    "buildlight": "^1.1.0",
+    "nestor": "^2.2.2"
   },
   "devDependencies": {
-    "buster-node": "^0.7.1",
-    "referee": "^1.2.0"
+    "sinon": "^14.0.0",
+    "@sinonjs/referee": "^9.1.1"
   },
   "scripts": {},
   "engines": {
-    "node": "'>= 4.0.0'"
+    "node": ">= 16.0.0"
   },
   "licenses": [
     {
