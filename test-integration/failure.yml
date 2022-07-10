@@ -1,10 +1,10 @@
 - params:
-    nestorbuildlight: ../../../../../bin/nestor-buildlight
+    nestorbuildlight: ../../../../../bin/nestor-buildlight.js
 
 - description: Inexisting command should display error message
   command: '{nestorbuildlight} someinexistingcommand'
   exitcode: 1
-  output: 'Unknown command: someinexistingcommand, use --help for more info'
+  output: "error: unknown command 'someinexistingcommand'. See 'nestor-buildlight --help'."
 
 - description: Inexisting Jenkins URL should display error message
   command: 'JENKINS_URL=http://someinexistinghost {nestorbuildlight} run'

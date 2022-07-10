@@ -1,5 +1,5 @@
 - params:
-    nestorbuildlight: ../../../../../bin/nestor-buildlight
+    nestorbuildlight: ../../../../../bin/nestor-buildlight.js
 
 - description: Command help should display help information
   command: '{nestorbuildlight} --help'
