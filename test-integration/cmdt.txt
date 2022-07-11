@@ -1,0 +1,5 @@
+Using directory: .bob/test-integration/cmdt-1657507709775-1781
+
+test-integration/failure.yml ..
+test-integration/success.yml .
+3 tests, 3 successes, 0 failure

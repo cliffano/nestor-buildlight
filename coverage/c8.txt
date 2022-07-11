@@ -1,0 +1,38 @@
+test | /opt/hostedtoolcache/node/16.15.1/x64/lib/node_modules/bob/node_modules/.bin/mocha --colors --reporter spec --recursive test/
+
+[0m[0m
+[0m  cli - exec[0m
+  [32m  [32m✔[39m[0m[90m should contain commands with actions[0m
+
+[0m  cli - run[0m
+  [32m  [32m✔[39m[0m[90m should notify buildlight when there is no monitoring error[0m
+  [32m  [32m✔[39m[0m[90m should monitor using default settings[0m
+  [32m  [32m✔[39m[0m[90m should log error message and exit with non-zero code[0m
+
+[0m  nestorbuildlight - nestorbuildlight[0m
+  [32m  [32m✔[39m[0m[90m should set opts to default when there is no customisation[0m
+  [32m  [32m✔[39m[0m[90m should default warn colour map to yellow when blue colour is not part of the scheme[0m
+
+[0m  nestorbuildlight - notify[0m
+  [32m  [32m✔[39m[0m[90m should switch all colours off then switch one colour on on build light device based on notification status[0m
+  [32m  [32m✔[39m[0m[90m should switch all colours off then switch blue colour on on build light device when notification status is warn[0m
+  [32m  [32m✔[39m[0m[90m should switch all colours off then switch yellow colour on on build light device when notification status is warn[0m
+  [32m  [32m✔[39m[0m[90m should switch all colours on on build light device when status is unknown[0m
+  [32m  [32m✔[39m[0m[90m should switch all colours off then switch red colour on on build light device when status is fail[0m
+  [32m  [32m✔[39m[0m[90m should default to rgb scheme and switch all colours on on build light device when status is unknown[0m
+
+[0m  nestorbuildlight - notify with blink enabled[0m
+  [32m  [32m✔[39m[0m[90m should blink red colour when status is fail and blinkOnFailure is true[0m
+  [32m  [32m✔[39m[0m[90m should log error message when an error occurs while blinking failure colour[0m
+
+
+[92m [0m[32m 14 passing[0m[90m (6s)[0m
+
+SUCCESS | exit code 0
+---------------------|---------|----------|---------|---------|-------------------
+File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+---------------------|---------|----------|---------|---------|-------------------
+All files            |     100 |      100 |     100 |     100 |                   
+ cli.js              |     100 |      100 |     100 |     100 |                   
+ nestorbuildlight.js |     100 |      100 |     100 |     100 |                   
+---------------------|---------|----------|---------|---------|-------------------
