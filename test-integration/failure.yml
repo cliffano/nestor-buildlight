@@ -9,4 +9,4 @@
 - description: Inexisting Jenkins URL should display error message
   command: 'JENKINS_URL=http://someinexistinghost {nestorbuildlight} run'
   exitcode: 1
-  output: 'getaddrinfo ENOTFOUND'
+  output: 'getaddrinfo'
