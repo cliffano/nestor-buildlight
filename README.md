@@ -1,11 +1,11 @@
 <img align="right" src="https://raw.github.com/cliffano/nestor-buildlight/master/avatar.jpg" alt="Avatar"/>
 
-[![Build Status](https://img.shields.io/travis/cliffano/nestor-buildlight.svg)](http://travis-ci.org/cliffano/nestor-buildlight)
+[![Build Status](https://github.com/cliffano/nestor-buildlight/workflows/CI/badge.svg)](https://github.com/cliffano/nestor-buildlight/actions?query=workflow%3ACI)
+[![Vulnerabilities Status](https://snyk.io/test/github/cliffano/nestor-buildlight/badge.svg)](https://snyk.io/test/github/cliffano/nestor-buildlight)
 [![Dependencies Status](https://img.shields.io/david/cliffano/nestor-buildlight.svg)](http://david-dm.org/cliffano/nestor-buildlight)
 [![Coverage Status](https://img.shields.io/coveralls/cliffano/nestor-buildlight.svg)](https://coveralls.io/r/cliffano/nestor-buildlight?branch=master)
 [![Published Version](https://img.shields.io/npm/v/nestor-buildlight.svg)](http://www.npmjs.com/package/nestor-buildlight)
 <br/>
-[![npm Badge](https://nodei.co/npm/nestor-buildlight.png)](http://npmjs.org/package/nestor-buildlight)
 
 Nestor Build Light
 ------------------
