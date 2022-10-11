@@ -64,15 +64,15 @@ As an alternative to password, you can use Jenkins API token instead. Jenkins AP
 Colophon
 --------
 
-[Developer's Guide](http://cliffano.github.io/developers_guide.html#nodejs)
+[Developer's Guide](https://cliffano.github.io/developers_guide.html#nodejs)
 
 Build reports:
 
-* [Code complexity report](http://cliffano.github.io/nestor-buildlight/complexity/plato/index.html)
-* [Unit tests report](http://cliffano.github.io/nestor-buildlight/test/mocha.txt)
-* [Test coverage report](http://cliffano.github.io/nestor-buildlight/coverage/c8/index.html)
-* [Integration tests report](http://cliffano.github.io/nestor-buildlight/test-integration/cmdt.txt)
-* [API Documentation](http://cliffano.github.io/nestor-buildlight/doc/jsdoc/index.html)
+* [Code complexity report](https://cliffano.github.io/nestor-buildlight/complexity/plato/index.html)
+* [Unit tests report](https://cliffano.github.io/nestor-buildlight/test/mocha.txt)
+* [Test coverage report](https://cliffano.github.io/nestor-buildlight/coverage/c8/index.html)
+* [Integration tests report](https://cliffano.github.io/nestor-buildlight/test-integration/cmdt.txt)
+* [API Documentation](https://cliffano.github.io/nestor-buildlight/doc/jsdoc/index.html)
 
 Related Projects:
 
