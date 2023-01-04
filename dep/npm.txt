@@ -6,7 +6,7 @@ npm WARN deprecated formidable@1.2.6: Please upgrade to latest, formidable@v2 or
 npm WARN deprecated messageformat@2.3.0: Package renamed as '@messageformat/core', see messageformat.github.io for more details. 'messageformat' will eventually provide a polyfill for Intl.MessageFormat, once it's been defined by Unicode & ECMA.
 npm WARN deprecated superagent@5.3.1: Please upgrade to v7.0.2+ of superagent.  We have fixed numerous issues with streams, form-data, attach(), filesystem errors not bubbling up (ENOENT on attach()), and all tests are now passing.  See the releases tab for more information at <https://github.com/visionmedia/superagent/releases>.
 
-added 307 packages, and audited 308 packages in 5s
+added 307 packages, and audited 308 packages in 4s
 
 63 packages are looking for funding
   run `npm fund` for details
