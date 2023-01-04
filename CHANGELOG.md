@@ -15,17 +15,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replace coverage from buster-istanbul to c8
 - Replace doc type from dox-foundation to jsdoc
 
-### 0.1.3
+### 0.1.3 - 2016-08-14
 * Set min node engine to >= 4.0.0
 
-### 0.1.1
+### 0.1.1 - 2015-2-14
 * Add colour-status logging
 
-### 0.1.0
+### 0.1.0 - 2015-03-02
 * Upgrade nestor to 0.3.x
 
-### 0.0.2
+### 0.0.2 - 2014-10-15
 * Add custom colour-status map support
 
-### 0.0.1
+### 0.0.1 - 2014-09-24
 * Initial version
