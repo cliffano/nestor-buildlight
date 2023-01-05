@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add node 18 to CI matrix
+
+### Changed
+- Upgrade node to 18 for GH Actions
+
 ## 1.0.0 - 2023-01-04
 ### Changed
 - Change module type to ESM
